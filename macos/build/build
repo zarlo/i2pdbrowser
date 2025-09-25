@@ -12,8 +12,8 @@ cd $dir
 
 arch=$(uname -m)
 language=$(osascript -e 'user locale of (get system info)' | sed -e 's/_/-/g')
-version="115.20.0esr"
-i2pdversion="2.56.0"
+version="140.3.1esr"
+i2pdversion="2.58.0"
 
 ftpmirror="https://ftp.mozilla.org/pub/firefox/releases/${version}"
 
@@ -103,10 +103,10 @@ sed -i '' -e "s/ServerURL=.*/ServerURL=-/" "../FirefoxESR.app/Contents/Resources
 
 echo "Downloading language packs..."
 mkdir ../FirefoxESR.app/Contents/Resources/browser/extensions
-curl -L -f -# -o ../FirefoxESR.app/Contents/Resources/browser/extensions/langpack-ru@firefox.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4144376/russian_ru_language_pack-115.0.20230726.201356.xpi
-curl -L -f -# -o ../FirefoxESR.app/Contents/Resources/browser/extensions/ruspell-wiktionary@addons.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4215701/2696307-1.77.xpi
-curl -L -f -# -o ../FirefoxESR.app/Contents/Resources/browser/extensions/langpack-en-US@firefox.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4144407/english_us_language_pack-115.0.20230726.201356.xpi
-curl -L -f -# -o ../FirefoxESR.app/Contents/Resources/browser/extensions/en-US@dictionaries.addons.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4175230/us_english_dictionary-115.0.xpi
+curl -L -f -# -o ../browser/browser/extensions/langpack-ru@firefox.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4144376/russian_ru_language_pack-144.0.20250924.90918.xpi
+curl -L -f -# -o ../browser/browser/extensions/ruspell-wiktionary@addons.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4215701/2696307-1.77.xpi
+curl -L -f -# -o ../browser/browser/extensions/langpack-en-US@firefox.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4584785/english_us_language_pack-144.0.20250924.90918.xpi
+curl -L -f -# -o ../browser/browser/extensions/en-US@dictionaries.addons.mozilla.org.xpi https://addons.mozilla.org/firefox/downloads/file/4175230/us_english_dictionary-140.3.xpi
 
 echo "Downloading NoScript extension..."
 curl -L -f -# -o ../FirefoxESR.app/Contents/Resources/browser/extensions/{73a6fe31-595d-460b-a920-fcc0f8843232}.xpi https://addons.mozilla.org/firefox/downloads/file/4411102/noscript-12.1.1.xpi
